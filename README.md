@@ -155,8 +155,8 @@ Benefits:
 Key Entities:
 
 * **User** – Authentication, profile, roles
-* **Category** – Food categories
-* **Product** – Food items
+* **Category** – Sweet categories
+* **Product** – Sweet items
 * **Banner** – Hero banners
 * **Order** – Order management
 
@@ -255,8 +255,6 @@ This ensures:
 
   * AWS
   * Docker
-  * Kubernetes
-
 ---
 
 ## 🧠 What This Project Demonstrates
@@ -272,14 +270,12 @@ This ensures:
 
 ## 👨‍💻 Author
 
-**[Your Name]**
+Aditya Sharma
 Java Backend / Full‑Stack Developer
 
 > This project reflects my ability to build **secure, scalable, and maintainable applications** that follow industry best practices.
 
 ---
-
-## ⭐ Final Note for Recruiters
 
 This project was built with the mindset of **real product development**, not tutorials. Every design decision prioritizes **clarity, security, and scalability** — exactly what production systems demand.
 
