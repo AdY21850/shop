@@ -1,0 +1,78 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bannerCard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="@dimen/_18sdp"
+    app:cardElevation="3dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- BACKGROUND IMAGE -->
+        <ImageView
+            android:id="@+id/bannerImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sweet1" />
+
+        <!-- DARK TRANSLUCENT OVERLAY -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#66000000" />
+
+        <!-- CONTENT -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_16sdp">
+
+            <!-- CTA BUTTON (ANCHOR) -->
+            <Button
+                android:id="@+id/orderNowButton"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_36sdp"
+                android:layout_alignParentBottom="true"
+                android:backgroundTint="@color/orange"
+                android:text="Order Now"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="@dimen/_11ssp" />
+
+            <!-- SUBTITLE (JUST ABOVE BUTTON) -->
+            <TextView
+                android:id="@+id/bannerSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/orderNowButton"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:text="Limited time offer"
+                android:textColor="#E5E7EB"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/poppins_medium"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <!-- TITLE (ABOVE SUBTITLE) -->
+            <TextView
+                android:id="@+id/bannerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/bannerSubtitle"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:text="Buy Now Get One Free"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_15ssp"
+                android:fontFamily="@font/poppins_bold"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</androidx.cardview.widget.CardView>

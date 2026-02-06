@@ -1,0 +1,69 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/spalshimg3">
+
+    <!-- Premium Quality Text -->
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/greatvibes_regular"
+        android:text="@string/premium_quality_n_amp_taste"
+        android:textAlignment="center"
+        android:textColor="#ffc68a"
+        android:textSize="@dimen/_30ssp"
+        android:layout_marginTop="@dimen/_50sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Sharma -->
+    <TextView
+        android:id="@+id/sharma"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/greatvibes_regular"
+        android:text="Sharma"
+        android:textColor="#ffc68a"
+        android:textSize="@dimen/_50ssp"
+        android:textStyle="italic|bold"
+        android:layout_marginStart="@dimen/_30sdp"
+        app:layout_constraintTop_toBottomOf="@id/text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Sweets -->
+    <TextView
+        android:id="@+id/sweets"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/greatvibes_regular"
+        android:text="Sweets"
+        android:textAlignment="textEnd"
+        android:textColor="#ffc68a"
+        android:textSize="@dimen/_50ssp"
+        android:textStyle="italic|bold"
+        android:layout_marginEnd="@dimen/_30sdp"
+        app:layout_constraintTop_toBottomOf="@id/sharma"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Get Started Button -->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20sdp"
+        android:backgroundTint="@color/brown_light"
+        android:fontFamily="@font/playfairdisplay_variablefont_wght"
+        android:text="Get Started"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

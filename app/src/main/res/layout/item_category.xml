@@ -1,0 +1,47 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/categoryCard"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_170sdp"
+    android:layout_margin="@dimen/_8sdp"
+    app:cardCornerRadius="@dimen/_18sdp"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="3dp">
+
+    <!-- GOLD BORDER BACKGROUND -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gold_card_border">
+
+        <!-- IMAGE -->
+        <ImageView
+            android:id="@+id/categoryImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:alpha="0.95"
+            android:src="@drawable/sweet2"/>
+
+        <!-- DARK OVERLAY -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#55000000"/>
+
+        <!-- TITLE -->
+        <TextView
+            android:id="@+id/categoryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_margin="@dimen/_12sdp"
+            android:text="Indian Sweets"
+            android:textColor="#FFC68A"
+            android:textSize="@dimen/_16ssp"
+            android:fontFamily="@font/poppins_bold"/>
+
+    </FrameLayout>
+
+</androidx.cardview.widget.CardView>

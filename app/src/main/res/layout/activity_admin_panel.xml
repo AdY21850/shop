@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgimg">
+    <!-- ADMIN TOP BAR -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/adminTopBar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_54sdp"
+        android:layout_margin="@dimen/_14sdp"
+        app:cardCornerRadius="@dimen/_16sdp"
+        app:cardBackgroundColor="#3A2219"
+        app:cardElevation="3dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_12sdp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <!-- BACK BUTTON -->
+            <ImageView
+                android:id="@+id/adminBackBtn"
+                android:layout_width="1dp"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_weight="1"
+                android:background="@drawable/qty_background"
+                android:padding="@dimen/_7sdp"
+                android:src="@drawable/outline_arrow_back_ios_new_24"
+                android:scaleType="center"
+                app:tint="#F59E0B" />
+
+            <!-- SETTINGS ICON -->
+            <ImageView
+                android:id="@+id/adminGearIcon"
+                android:layout_width="1dp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_weight="1"
+                android:src="@drawable/outline_settings_heart_24"
+                android:scaleType="fitCenter"
+                app:tint="#FFC68A" />
+
+            <!-- TITLE -->
+            <TextView
+                android:id="@+id/adminTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="Admin Panel"
+                android:textColor="#FFC68A"
+                android:textSize="@dimen/_16ssp" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- ADD NEW SWEET BUTTON -->
+    <Button
+        android:id="@+id/addSweetButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="+ Add Sweets"
+        android:fontFamily="@font/poppins_regular"
+        android:backgroundTint="#C26A1C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminTopBar" />
+
+
+    <!-- ALL SWEETS MAIN CARD -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/allSweetsCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_14sdp"
+        app:cardCornerRadius="@dimen/_18sdp"
+        app:cardBackgroundColor="@color/cardview_shadow_end_color"
+        app:cardElevation="3dp"
+        app:layout_constraintTop_toBottomOf="@id/addSweetButton"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/cardview_shadow_end_color"
+            android:padding="@dimen/_14sdp">
+
+            <!-- TITLE -->
+            <TextView
+                android:id="@+id/allSweetsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Sweets"
+                android:textColor="#E6C9A3"
+                android:textSize="@dimen/_16ssp"
+                android:fontFamily="@font/poppins_medium"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!-- SEARCH BAR -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/searchCard"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_44sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                android:backgroundTint="@color/cardview_shadow_end_color"
+                app:layout_constraintTop_toBottomOf="@id/allSweetsTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="@dimen/_12sdp"
+                    android:background="@drawable/gold_card_border"
+                    android:paddingEnd="@dimen/_12sdp">
+
+                    <ImageView
+                        android:id="@+id/searchIcon"
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_18sdp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/baseline_search_24"
+                        app:tint="#CFA983" />
+
+                    <EditText
+                        android:id="@+id/searchInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@id/searchIcon"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:background="@android:color/transparent"
+                        android:hint="Search sweets..."
+                        android:textColor="#FFC68A"
+                        android:textColorHint="#CFA983"
+                        android:textSize="@dimen/_13ssp"
+                        android:fontFamily="@font/poppins_regular" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- SWEETS LIST -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/adminSweetsRecycler"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/_10sdp"
+                app:layout_constraintBottom_toTopOf="@+id/showingCountRow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:listitem="@layout/item_admin_sweet"
+                app:layout_constraintTop_toBottomOf="@id/searchCard" />
+
+            <!-- FOOTER COUNT -->
+            <!-- FOOTER COUNT WITH SIDE LINES -->
+            <LinearLayout
+                android:id="@+id/showingCountRow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/searchCard"
+                app:layout_constraintVertical_bias="1.0">
+
+                <!-- LEFT FADE LINE -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/faded_divider" />
+
+                <!-- CENTER TEXT -->
+                <TextView
+                    android:id="@+id/showingCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Showing 3 sweets"
+                    android:textColor="#CFA983"
+                    android:textSize="@dimen/_12ssp" />
+
+                <!-- RIGHT FADE LINE -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/faded_divider" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottomNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_margin="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/brown_dark"
+        app:cardCornerRadius="@dimen/_24sdp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- HOME (ACTIVE) -->
+            <LinearLayout
+                android:id="@+id/navHome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:src="@drawable/outline_home_24"
+                    app:tint="#FFC68A" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Home"
+                    android:textColor="#FFC68A"
+                    android:textSize="@dimen/_10ssp" />
+            </LinearLayout>
+
+            <!-- ORDERS -->
+            <LinearLayout
+                android:id="@+id/navOrders"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:src="@drawable/outline_gamepad_circle_left_24"
+                    app:tint="#CFA983" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Categories"
+                    android:textColor="#CFA983"
+                    android:textSize="@dimen/_10ssp" />
+            </LinearLayout>
+
+            <!-- CART WITH BADGE -->
+            <LinearLayout
+                android:id="@+id/navCart"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp">
+
+                    <!-- Cart Icon -->
+                    <ImageView
+                        android:id="@+id/cartIcon"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/outline_shopping_cart_24"
+                        app:tint="#CFA983" />
+
+                    <!-- PERFECT ROUND BADGE -->
+                    <TextView
+                        android:id="@+id/cartBadge"
+                        android:layout_width="@dimen/_14sdp"
+                        android:layout_height="@dimen/_14sdp"
+                        android:layout_gravity="top|end"
+                        android:background="@drawable/circle"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textSize="@dimen/_10ssp"
+                        android:textColor="@android:color/white"
+                        android:includeFontPadding="false" />
+                </FrameLayout>
+
+                <!-- CART LABEL -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Cart"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="#CFA983"
+                    android:fontFamily="@font/poppins_regular"/>
+            </LinearLayout>
+
+
+
+            <!-- PROFILE -->
+            <LinearLayout
+                android:id="@+id/navProfile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:src="@drawable/outline_person_24"
+                    app:tint="#CFA983" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Profile"
+                    android:textColor="#CFA983"
+                    android:textSize="@dimen/_10ssp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

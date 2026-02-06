@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "478331272752",
+    "project_id": "sweet-shop-c776e",
+    "storage_bucket": "sweet-shop-c776e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478331272752:android:7f298d598ec871d6e077f5",
+        "android_client_info": {
+          "package_name": "com.example.sweet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "478331272752-aqku7v26brl218g300s5b51rhu8tbhf5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sweet",
+            "certificate_hash": "abf1dad40c773447cd3bff5b80ea0f4d77c20ad1"
+          }
+        },
+        {
+          "client_id": "478331272752-q7kqaidvmamv9llv1e796708mpa4f485.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD562wFh_hMKj_Q8KQg_r8m8wC6jqC4Cv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "478331272752-q7kqaidvmamv9llv1e796708mpa4f485.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

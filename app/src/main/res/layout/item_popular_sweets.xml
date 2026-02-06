@@ -1,0 +1,98 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_140sdp"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    android:layout_marginEnd="@dimen/_5sdp">
+
+    <!-- BASE CARD -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sweetCard"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_marginTop="@dimen/_60sdp"
+        app:cardCornerRadius="@dimen/_22sdp"
+        app:cardBackgroundColor="#3A2219"
+        app:cardElevation="3dp">
+
+        <!-- GOLD FADE OVERLAY -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gold_fade_overlay" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical"
+                android:padding="@dimen/_14sdp">
+
+                <!-- PRODUCT NAME -->
+                <TextView
+                    android:id="@+id/productName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chocolate Cupcake"
+                    android:textColor="#F5D3A1"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_10ssp"
+                    android:fontFamily="@font/poppins_medium" />
+
+                <!-- PRICE -->
+                <TextView
+                    android:id="@+id/productPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$4.00"
+                    android:textColor="#F59E0B"
+                    android:textSize="@dimen/_10ssp"
+                    android:layout_marginTop="@dimen/_4sdp" />
+
+                <!-- RATING -->
+                <RatingBar
+                    android:id="@+id/productRating"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:stepSize="0.5"
+                    android:rating="4.5"
+                    android:isIndicator="true"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:progressTint="#F59E0B"
+                    android:secondaryProgressTint="#CFA983" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- FLOATING CIRCULAR IMAGE -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/productImageCard"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_130sdp"
+        app:cardCornerRadius="@dimen/_100sdp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/circle"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#F3E6D6">
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/circle"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cupcake1" />
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

@@ -1,0 +1,222 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialogCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   android:layout_marginTop="@dimen/_30sdp"
+    app:cardCornerRadius="@dimen/_18sdp"
+    app:cardBackgroundColor="#3B1E12">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gold_card_border">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/gold_card_border"
+            android:padding="@dimen/_16sdp">
+
+            <!-- HEADER -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/backBtn"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:src="@drawable/outline_arrow_back_ios_new_24"
+                    app:tint="#FFC68A" />
+
+                <TextView
+                    android:id="@+id/dialogTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Add New Sweet"
+                    android:textColor="#FFC68A"
+                    android:textSize="@dimen/_16ssp"
+                    android:fontFamily="@font/poppins_medium" />
+
+                <ImageView
+                    android:id="@+id/closeBtn"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/outline_x_circle_24"
+                    app:tint="#FFC68A" />
+
+            </RelativeLayout>
+
+            <!-- SUBTITLE -->
+            <TextView
+                android:id="@+id/subtitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter details to add a sweet"
+                android:textColor="#CFA983"
+                android:textSize="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <!-- NAME -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="#FFC68A" />
+
+            <EditText
+                android:id="@+id/nameInput"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:hint="Name"
+                android:background="@drawable/gold_card_border" />
+
+            <!-- CATEGORY + PRICE -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textSize="@dimen/_15sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Category"
+                        android:textColor="#FFC68A" />
+
+                    <EditText
+                        android:id="@+id/categoryInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_25sdp"
+                        android:hint="Category"
+                        android:background="@drawable/gold_card_border" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/_8sdp"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textSize="@dimen/_15sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price"
+                        android:textColor="#FFC68A" />
+
+                    <EditText
+                        android:id="@+id/priceInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_25sdp"
+                        android:hint="Price"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/gold_card_border" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- IMAGE URL -->
+            <TextView
+                android:textSize="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Image URL"
+                android:textColor="#FFC68A"
+                android:layout_marginTop="@dimen/_10sdp" />
+
+            <EditText
+                android:id="@+id/imageInput"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:hint="https://"
+                android:background="@drawable/gold_card_border" />
+
+            <!-- DESCRIPTION -->
+            <TextView
+                android:textSize="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textColor="#FFC68A"
+                android:layout_marginTop="@dimen/_10sdp" />
+
+            <EditText
+                android:id="@+id/descriptionInput"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_90sdp"
+                android:hint="Description"
+                android:gravity="top"
+                android:background="@drawable/gold_card_border" />
+
+            <!-- BUTTONS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/saveBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_42sdp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/_12sdp"
+                    app:cardBackgroundColor="#E58A2F">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Save"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/poppins_medium" />
+
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="1dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cancelBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_42sdp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/_12sdp"
+                    app:cardBackgroundColor="#5A2A14">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Cancel"
+                        android:textColor="#FFC68A"
+                        android:fontFamily="@font/poppins_medium" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.cardview.widget.CardView>

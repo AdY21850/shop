@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brown_dark">#2B1B14</color>
+    <color name="brown_medium">#4A2C1F</color>
+    <color name="brown_light">#6B3F2B</color>
+
+    <color name="cream">#F6E7D8</color>
+    <color name="gold">#F4C430</color>
+    <color name="orange">#F59E0B</color>
+    <color name="profile_name">#F7C88A</color>
+    <color name="profile_email">#D8B089</color>
+    <color name="edit_button">#D77B2D</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>
