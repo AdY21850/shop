@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -36,7 +37,7 @@ public class ProductListAdapter
             @NonNull ViewGroup parent,
             int viewType
     ) {
-        View view = LayoutInflater.from(context)
+        View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_product_list, parent, false);
         return new ViewHolder(view);
     }
@@ -51,15 +52,39 @@ public class ProductListAdapter
         holder.productName.setText(sweet.getName());
         holder.productPrice.setText("₹" + sweet.getPrice());
         holder.rightPrice.setText("₹" + sweet.getPrice());
+        holder.productRating.setRating(4.5f); // static for now
 
         Glide.with(context)
                 .load(sweet.getImageUrl())
-                .placeholder(R.drawable.bgimg)
+                .placeholder(R.drawable.cupcake1)
+                .error(R.drawable.cupcake1)
                 .into(holder.productImage);
 
         holder.itemView.setOnClickListener(v -> {
+
+            // press animation (same UX language as grid)
+            v.animate()
+                    .scaleX(0.97f)
+                    .scaleY(0.97f)
+                    .setDuration(80)
+                    .setInterpolator(new AccelerateDecelerateInterpolator())
+                    .withEndAction(() ->
+                            v.animate()
+                                    .scaleX(1f)
+                                    .scaleY(1f)
+                                    .setDuration(80)
+                                    .start()
+                    )
+                    .start();
+
+            // navigate to SweetDescActivity
             Intent intent = new Intent(context, SweetDescActivity.class);
-            intent.putExtra("SWEET_ID", sweet.getId());
+            intent.putExtra("sweet_id", sweet.getId());
+            intent.putExtra("sweet_name", sweet.getName());
+            intent.putExtra("sweet_price", sweet.getPrice());
+            intent.putExtra("sweet_image", sweet.getImageUrl());
+            intent.putExtra("sweet_active", sweet.isActive());
+
             context.startActivity(intent);
         });
     }
@@ -77,10 +102,11 @@ public class ProductListAdapter
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
+
             productImage = itemView.findViewById(R.id.productImage);
-            productName = itemView.findViewById(R.id.productName);
+            productName  = itemView.findViewById(R.id.productName);
             productPrice = itemView.findViewById(R.id.productPrice);
-            rightPrice = itemView.findViewById(R.id.rightPrice);
+            rightPrice   = itemView.findViewById(R.id.rightPrice);
             productRating = itemView.findViewById(R.id.productRating);
         }
     }

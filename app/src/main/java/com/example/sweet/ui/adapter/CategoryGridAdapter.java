@@ -48,16 +48,17 @@ public class CategoryGridAdapter
     ) {
         Category category = categories.get(position);
 
-        // bind data
+        // bind category name
         holder.name.setText(category.getName());
 
+        // load category image
         Glide.with(context)
                 .load(category.getImageUrl())
                 .placeholder(R.drawable.bgimg)
                 .error(R.drawable.bgimg)
                 .into(holder.image);
 
-        // item click
+        // item click listener -> navigate to CategoriesList
         holder.itemView.setOnClickListener(v -> {
 
             // press animation
@@ -72,9 +73,10 @@ public class CategoryGridAdapter
                                     .scaleY(1f)
                                     .setDuration(90)
                                     .start()
-                    ).start();
+                    )
+                    .start();
 
-            // open category sweet list
+            // open category list screen
             Intent intent = new Intent(context, CategoriesList.class);
             intent.putExtra("CATEGORY_ID", category.getId());
             intent.putExtra("CATEGORY_NAME", category.getName());
